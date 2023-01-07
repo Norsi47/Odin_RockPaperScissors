@@ -21,12 +21,11 @@ function roundRockPaperScissors(playerSelection, computerSelection) {
     } else if (playerSelection === 'rock' && computerSelection === 'scissors') {
         return "You Lose rock beats scissors";
     } else if (playerSelection === 'paper' && computerSelection === 'rock') {
-      return "You Win Paper beats rock";
-    }
-    else if (playerSelection === computerSelection) {
+        return "You Win Paper beats rock";
+    } else if (playerSelection === computerSelection) {
         return `It is a tie you both picked ${playerSelection}`;
     } else {
-        return `You Lose! ${computerSelection} beats ${playerSelection} `;
+        return `You Lose! ${computerSelection} beats ${playerSelection}`;
     }
 
 }
