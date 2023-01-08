@@ -35,3 +35,4 @@ function roundRockPaperScissors(playerSelection, computerSelection) {
 const playerSelection = prompt("Hello, Please pick: Rock, Paper or Scissors").toLowerCase();
 const computerSelection = getComputerChoice();
 console.log(roundRockPaperScissors(playerSelection, computerSelection));
+// streak
