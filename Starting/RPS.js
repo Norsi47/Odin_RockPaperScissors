@@ -12,7 +12,7 @@ function getComputerChoice() {
 
 
 //single round of rock paper scissors
-function roundRockPaperScissors(playerSelection, computerSelection) {
+function playRound(playerSelection, computerSelection) {
     // computerSelection = getComputerChoice();
     if (playerSelection === "rock" && computerSelection === "paper") {
         return "You Lose! Paper Beats Rock";
@@ -32,7 +32,20 @@ function roundRockPaperScissors(playerSelection, computerSelection) {
 
 
 //to test player selection vs computer selection
+//prompting user to enter solution
 const playerSelection = prompt("Hello, Please pick: Rock, Paper or Scissors").toLowerCase();
 const computerSelection = getComputerChoice();
-console.log(roundRockPaperScissors(playerSelection, computerSelection));
-// streak
+console.log(playRound(playerSelection, computerSelection));
+
+/*play 5 round that will keep score,
+* reports winner or loser'*/
+function game() {
+   let keepScore = playRound();
+   for (keepScore = 0; keepScore < 5; keepScore++) {
+       if (keepScore > playerSelection) {
+           console.log(`${playerSelection}, You won`);
+       }
+
+   }
+
+}
