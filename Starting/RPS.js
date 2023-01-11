@@ -38,14 +38,18 @@ const computerSelection = getComputerChoice();
 console.log(playRound(playerSelection, computerSelection));
 
 /*play 5 round that will keep score,
-* reports winner or loser'*/
+* reports winner or loser'
+* -> want playRound function to loop 5 times
+* -> save each return satement from player selection or computer
+* -> print out the winner from who ever got selected 5 times in the loop*/
 function game() {
    let keepScore = playRound();
-   for (keepScore = 0; keepScore < 5; keepScore++) {
-       if (keepScore > playerSelection) {
-           console.log(`${playerSelection}, You won`);
+   for (let i = 0; i < 5; i++) {
+        keepScore = i;
        }
 
    }
 
-}
+
+//calling ame function
+console.log(game());
