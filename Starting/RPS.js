@@ -24,9 +24,11 @@ function playRound(playerSelection, computerSelection) {
         return "You Win Paper beats rock";
     } else if (playerSelection === computerSelection) {
         return `It is a tie you both picked ${playerSelection}`;
-    } else {
+     }
+    else {
         return `You Lose! ${computerSelection} beats ${playerSelection}`;
     }
+
 
 }
 
@@ -36,20 +38,20 @@ function playRound(playerSelection, computerSelection) {
 const playerSelection = prompt("Hello, Please pick: Rock, Paper or Scissors").toLowerCase();
 const computerSelection = getComputerChoice();
 console.log(playRound(playerSelection, computerSelection));
+console.log(`\nPlayer Picked ${playerSelection} and Computer chose ${computerSelection}`.toUpperCase());
 
 /*play 5 round that will keep score,
 * reports winner or loser'
 * -> want playRound function to loop 5 times
 * -> save each return satement from player selection or computer
 * -> print out the winner from who ever got selected 5 times in the loop*/
-function game() {
-   let keepScore = playRound();
-   for (let i = 0; i < 5; i++) {
-        keepScore = i;
-       }
+// function game() {
+//     let replayRound = playRound(playerSelection, computerSelection);
+//     for (let i = 0; i < 5; i++) {
+//        replayRound = i ;
+//     }
+// }
+//
+// console.log(game());
 
-   }
 
-
-//calling ame function
-console.log(game());
