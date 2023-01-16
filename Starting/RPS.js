@@ -32,27 +32,25 @@ function playRound(playerSelection, computerSelection) {
 
 }
 
-
-//to test player selection vs computer selection
-//prompting user to enter solution
-const playerSelection = prompt("Hello, Please pick: Rock, Paper or Scissors").toLowerCase();
-const computerSelection = getComputerChoice();
-//print out who won
-console.log(playRound(playerSelection, computerSelection));
-//print out the players and cpu selection to uppercase
-console.log(`\nPlayer Picked ${playerSelection} and Computer chose ${computerSelection}`.toUpperCase());
-
 /*play 5 round that will keep score,
 * reports winner or loser'
 * -> want playRound function to loop 5 times
 * -> save each return satement from player selection or computer
 * -> print out the winner from who ever got selected 5 times in the loop*/
 function game() {
-    let replayRound = playRound(playerSelection, computerSelection);
-    for (let i = 0; i <= 5; i++) {
-      let i = playRound(playerSelection, computerSelection);
-       console.log(i);
+//will loop through prompt question 5 times, start from 1-5 not 0-5
+    for (let i = 1; i <= 5; i++) {
+//to test player selection vs computer selection
+//prompting user to enter solution
+        const playerSelection = prompt("Hello, Please pick: Rock, Paper or Scissors").toLowerCase();
+        const computerSelection = getComputerChoice();
+        //print out who won
+        console.log(playRound(playerSelection, computerSelection));
+
+//print out the players and cpu selection to uppercase
+        console.log(`\n ${i}-> Player Picked ${playerSelection} and Computer chose ${computerSelection}`.toUpperCase());
     }
+
 }
 
 console.log(game());
