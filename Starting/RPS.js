@@ -10,25 +10,31 @@ function getComputerChoice() {
 
 // console.log(getComputerChoice());
 
+//the score player starts with
+// let playersStartScore = 10;
 
 //single round of rock paper scissors
 function playRound(playerSelection, computerSelection) {
     // computerSelection = getComputerChoice();
     if (playerSelection === "rock" && computerSelection === "paper") {
-        return "You Lose! Paper Beats Rock";
+        let  playersStartScore = 10 - 1
+        return "You Lose! Paper Beats Rock",  console.log(` Players Score = ${playersStartScore}`);
     } else if (playerSelection === 'scissors' && computerSelection === 'paper') {
-        return "You win Scissors beats Paper";
+      let  playersStartScore = 10 + 1
+        return "You win Scissors beats Paper ", console.log(`Players Score = ${playersStartScore}`) ;
     } else if (playerSelection === 'rock' && computerSelection === 'scissors') {
-        return "You Lose rock beats scissors";
+       let playersStartScore = 10 - 1
+        return "You Lose rock beats scissors" , console.log(`Players Score = ${playersStartScore}`);
     } else if (playerSelection === 'paper' && computerSelection === 'rock') {
-        return "You Win Paper beats rock";
+       let playersStartScore = 10 + 1
+        return "You Win Paper beats rock", `Players Score = ${playersStartScore}`;
     } else if (playerSelection === computerSelection) {
-        return `It is a tie you both picked ${playerSelection}`;
+       let playersStartScore = 10
+        return `It is a tie you both picked ${playerSelection}`, console.log(`Player Score = ${playersStartScore}, it is a tie`) ;
      }
     else {
         return `You Lose! ${computerSelection} beats ${playerSelection}`;
     }
-
 
 }
 
