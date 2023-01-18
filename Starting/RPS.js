@@ -11,26 +11,25 @@ function getComputerChoice() {
 // console.log(getComputerChoice());
 
 //the score player starts with
-// let playersStartScore = 10;
+let playersStartScore = 10;
 
 //single round of rock paper scissors
 function playRound(playerSelection, computerSelection) {
+
     // computerSelection = getComputerChoice();
     if (playerSelection === "rock" && computerSelection === "paper") {
-        let  playersStartScore = 10 - 1
-        return "You Lose! Paper Beats Rock",  console.log(` Players Score = ${playersStartScore}`);
+
+        return `You Lose! Paper Beats Rock, Players Score = ${playersStartScore - 1}`;
+
     } else if (playerSelection === 'scissors' && computerSelection === 'paper') {
-      let  playersStartScore = 10 + 1
-        return "You win Scissors beats Paper ", console.log(`Players Score = ${playersStartScore}`) ;
+        return `You win Scissors beats Paper, Players Score = ${playersStartScore + 1}`;
     } else if (playerSelection === 'rock' && computerSelection === 'scissors') {
-       let playersStartScore = 10 - 1
-        return "You Lose rock beats scissors" , console.log(`Players Score = ${playersStartScore}`);
+        return `You Lose rock beats scissors, Players Score = ${playersStartScore - 1}`;
     } else if (playerSelection === 'paper' && computerSelection === 'rock') {
-       let playersStartScore = 10 + 1
-        return "You Win Paper beats rock", `Players Score = ${playersStartScore}`;
+
+        return `You Win Paper beats rock, Players Score = ${playersStartScore + 1}`;
     } else if (playerSelection === computerSelection) {
-       let playersStartScore = 10
-        return `It is a tie you both picked ${playerSelection}`, console.log(`Player Score = ${playersStartScore}, it is a tie`) ;
+        return `It is a tie you both picked ${playerSelection}, Player Score = ${playersStartScore} no points added, it is a tie` ;
      }
     else {
         return `You Lose! ${computerSelection} beats ${playerSelection}`;
@@ -39,9 +38,9 @@ function playRound(playerSelection, computerSelection) {
 }
 
 /*play 5 round that will keep score,
-* reports winner or loser'
-* -> want playRound function to loop 5 times
-* -> save each return satement from player selection or computer
+* reports winner or loser
+* -> want playRound function to loop 5 times ( done)
+* -> save each return satement from player selection or computer (kinda done)
 * -> print out the winner from who ever got selected 5 times in the loop*/
 function game() {
 //will loop through prompt question 5 times, start from 1-5 not 0-5
