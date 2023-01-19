@@ -12,6 +12,7 @@ function getComputerChoice() {
 
 //the score player starts with
 let playersStartScore = 10;
+let cpuStartScore = 10;
 
 //single round of rock paper scissors
 function playRound(playerSelection, computerSelection) {
@@ -19,20 +20,24 @@ function playRound(playerSelection, computerSelection) {
     // computerSelection = getComputerChoice();
     if (playerSelection === "rock" && computerSelection === "paper") {
 
-        return `You Lose! Paper Beats Rock, Players Score = ${playersStartScore - 1}`;
+        return `You Lose! Paper Beats Rock, Players Score = ${playersStartScore - 1}, CPU Score = ${cpuStartScore + 1}`;
 
     } else if (playerSelection === 'scissors' && computerSelection === 'paper') {
-        return `You win Scissors beats Paper, Players Score = ${playersStartScore + 1}`;
+        return `You win Scissors beats Paper, Players Score = ${playersStartScore + 1} , CPU Score = ${cpuStartScore - 1}`;
     } else if (playerSelection === 'rock' && computerSelection === 'scissors') {
-        return `You Lose rock beats scissors, Players Score = ${playersStartScore - 1}`;
+        return `You Lose rock beats scissors, Players Score = ${playersStartScore - 1}, CPU Score = ${cpuStartScore +1}`;
     } else if (playerSelection === 'paper' && computerSelection === 'rock') {
 
-        return `You Win Paper beats rock, Players Score = ${playersStartScore + 1}`;
-    } else if (playerSelection === computerSelection) {
-        return `It is a tie you both picked ${playerSelection}, Player Score = ${playersStartScore} no points added, it is a tie` ;
+        return `You Win Paper beats rock, Players Score = ${playersStartScore + 1}, CPU Score = ${cpuStartScore - 1}`;
+    } else if (playerSelection === "scissors" && computerSelection === `Rock`) {
+        return  `You Lose Rock beats Scissors. Players Score= ${playersStartScore -1}, CPU Score = ${cpuStartScore + 1}`;
+
+    }
+    else if (playerSelection === computerSelection) {
+        return `It is a tie you both picked ${playerSelection}, Player Score = ${playersStartScore}, CPU Score = ${cpuStartScore} no points added, it is a tie` ;
      }
     else {
-        return `You Lose! ${computerSelection} beats ${playerSelection}`;
+        return `You Lose! ${computerSelection} beats ${playerSelection}, ComputerWins ${cpuStartScore + 1}, PlayerOne Wins ${playersStartScore -1}`;
     }
 
 }
