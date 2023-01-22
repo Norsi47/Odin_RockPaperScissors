@@ -40,6 +40,12 @@ function playRound(playerSelection, computerSelection) {
         return `You Lose! ${computerSelection} beats ${playerSelection}, ComputerWins ${cpuStartScore + 1}, PlayerOne Wins ${playersStartScore -1}`;
     }
 
+
+    if (playersStartScore || cpuStartScore > 10) {
+        return `Hey You won the game`;
+
+    }
+
 }
 
 /*play 5 round that will keep score,
@@ -59,6 +65,7 @@ function game() {
 
 //print out the players and cpu selection to uppercase
         console.log(`\n ${i}-> Player Picked ${playerSelection} and Computer chose ${computerSelection}`.toUpperCase());
+
     }
 
 }
