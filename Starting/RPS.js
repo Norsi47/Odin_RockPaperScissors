@@ -2,6 +2,9 @@
 // const getComputerChoice = "Rock, Paper or Scissors";
 // console.log(getComputerChoice);
 
+//message for game, <b> to make it bold
+ document.write("<b>Rock Paper Scissors Game, Inspect Console to see difference</b>");
+
 function getComputerChoice() {
     const randomPick = ['rock', 'paper', 'scissors'];
     //logic for to pick random variable selections
